@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Bienvenu sur Email testing avec django</h1>
+    {% if msg %}
+    <strong>{{msg}}</strong>
+    {% endif %}
+    <form action="" method="post">
+      {% csrf_token %}
+      <label for="email_id">Email:</label>
+      <input
+        type="email"
+        name="email"
+        id="email_id"
+        placeholder="Enter your Address mail"
+      />
+      <input type="submit" value="Envoiyer" />
+    </form>
+  </body>
+</html>
